@@ -6,6 +6,6 @@ import com.dmz9.player.presentation.UiCommand
 
 open class BaseFragment : Fragment(), IView {
     override fun exec(command: UiCommand) {
-        (activity as BaseActivity?)?.exec(command)
+        (activity as SingleActivity?)?.exec(command)
     }
 }

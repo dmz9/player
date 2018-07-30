@@ -8,16 +8,13 @@ import com.dmz9.player.di.components.ActivityComponent
 import com.dmz9.player.presentation.IPresenter
 import com.dmz9.player.presentation.IView
 import com.dmz9.player.presentation.UiCommand
-import com.dmz9.player.ui.main.MainFragment
-import javax.inject.Inject
-import javax.inject.Named
 
-class BaseActivity : AppCompatActivity(), IView {
+class SingleActivity : AppCompatActivity(), IView {
 
     lateinit var graph: ActivityComponent
 
     @Inject
-    @field:Named("wtf")
+    @field:Named("AppPresenter")
     lateinit var presenter: IPresenter
 
     override fun exec(command: UiCommand) {
@@ -33,13 +30,8 @@ class BaseActivity : AppCompatActivity(), IView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_single)
         BaseApp.inject(this)
-        setContentView(R.layout.main_activity)
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
-                .commitNow()
-        }
     }
 
     override fun onResume() {
