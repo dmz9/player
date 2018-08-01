@@ -37,3 +37,9 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
         languageVersion = '1.1'
     }
 }
+
+repositories {
+    mavenCentral()
+}
+
+
