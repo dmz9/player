@@ -2,6 +2,7 @@ package com.dmz9.player.domain.usecase
 
 import com.dmz9.player.domain.ILibraryPlugin
 import com.dmz9.player.domain.plugin.LocalMusic
+import javax.inject.Inject
 
 /**
  * библиотека

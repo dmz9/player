@@ -13,6 +13,8 @@ import com.dmz9.player.presentation.UiCommand
 import com.dmz9.player.ui.adapter.TrackListAdapter
 import com.dmz9.player.ui.base.BaseApp
 import com.dmz9.player.ui.base.BaseFragment
+import javax.inject.Inject
+import javax.inject.Named
 
 class MediaLibraryView : BaseFragment() {
     @Inject

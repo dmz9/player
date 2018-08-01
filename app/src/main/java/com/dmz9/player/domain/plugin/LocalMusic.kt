@@ -4,6 +4,9 @@ import com.dmz9.player.domain.ILibraryPlugin
 import com.dmz9.player.domain.ITrackLoader
 import com.dmz9.player.domain.entity.Criteria
 import com.dmz9.player.domain.entity.Track
+import io.reactivex.Single
+import javax.inject.Inject
+import javax.inject.Named
 
 class LocalMusic @Inject constructor(
     @Named("local")

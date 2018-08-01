@@ -7,6 +7,7 @@ import com.dmz9.player.R
 import com.dmz9.player.presentation.IRouter
 import com.dmz9.player.presentation.Route
 import com.dmz9.player.ui.view.MediaLibraryView
+import javax.inject.Inject
 
 open class Router @Inject constructor(
     private val supportFragmentManager: FragmentManager

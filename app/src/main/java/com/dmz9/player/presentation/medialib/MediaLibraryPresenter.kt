@@ -6,6 +6,7 @@ import com.dmz9.player.presentation.IView
 import com.dmz9.player.presentation.UiCommand
 import com.dmz9.player.presentation.UiEvent
 import com.dmz9.player.presentation.base.BasePresenter
+import javax.inject.Inject
 
 class MediaLibraryPresenter @Inject constructor(
     private val lib: LibraryUseCase

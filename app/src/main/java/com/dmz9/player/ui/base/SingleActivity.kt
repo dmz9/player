@@ -8,6 +8,8 @@ import com.dmz9.player.di.components.ActivityComponent
 import com.dmz9.player.presentation.IPresenter
 import com.dmz9.player.presentation.IView
 import com.dmz9.player.presentation.UiCommand
+import javax.inject.Inject
+import javax.inject.Named
 
 class SingleActivity : AppCompatActivity(), IView {
 

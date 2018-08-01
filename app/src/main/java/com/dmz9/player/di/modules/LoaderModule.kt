@@ -4,6 +4,7 @@ import com.dmz9.player.data.loader.LocalTrackLoader
 import com.dmz9.player.domain.ITrackLoader
 import dagger.Binds
 import dagger.Module
+import javax.inject.Named
 
 @Module
 interface LoaderModule {
