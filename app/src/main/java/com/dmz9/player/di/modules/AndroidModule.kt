@@ -1,5 +1,6 @@
 package com.dmz9.player.di.modules
 
+import android.content.Context
 import android.support.v4.app.FragmentManager
 import com.dmz9.player.ui.base.SingleActivity
 import dagger.Module
@@ -11,4 +12,7 @@ class AndroidModule(
 ) {
     @Provides
     fun provideFragmentManager(): FragmentManager = activity.supportFragmentManager
+
+    @Provides
+    fun provideContext(): Context = activity.applicationContext
 }
