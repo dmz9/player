@@ -33,6 +33,8 @@ class MediaLibraryView : BaseFragment() {
         rv?.let {
             it.layoutManager = LinearLayoutManager(context)
             it.adapter = adapter
+            it.setItemViewCacheSize(20)
+            it.setHasFixedSize(true)
         }
         return v
     }

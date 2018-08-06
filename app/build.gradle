@@ -45,5 +45,6 @@ dependencies {
     implementation "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     api project(path: ':domain')
+    api project(path: ':base')
     implementation project (path: ':plugin_local')
 }
