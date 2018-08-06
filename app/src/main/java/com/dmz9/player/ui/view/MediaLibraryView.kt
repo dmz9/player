@@ -21,7 +21,9 @@ class MediaLibraryView : BaseFragment() {
     @field:Named("MediaLibraryPresenter")
     lateinit var presenter: IPresenter
     private var rv: RecyclerView? = null
-    private val adapter = TrackListAdapter()
+    private val adapter = TrackListAdapter{
+        presenter.on(it)
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         BaseApp.inject(this)
