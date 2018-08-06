@@ -22,11 +22,11 @@ class BaseApp : Application() {
 
     companion object {
         @JvmStatic
-        internal lateinit var graph: AppComponent
+        lateinit var graph: AppComponent
 
-        fun inject(frag: MediaLibraryView) = (frag.activity!! as SingleActivity).graph.inject(frag)
+        fun inject(frag: MediaLibraryView) = (frag.activity!! as SingleActivity).activityGraph.inject(frag)
         fun inject(activity: SingleActivity) {
-            activity.graph = DaggerActivityComponent
+            activity.activityGraph = DaggerActivityComponent
                 .builder()
                 .appComponent(graph)
                 .androidModule(AndroidModule(activity))

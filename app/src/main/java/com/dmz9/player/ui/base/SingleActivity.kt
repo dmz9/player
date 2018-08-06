@@ -13,7 +13,7 @@ import javax.inject.Named
 
 class SingleActivity : AppCompatActivity(), IView {
 
-    lateinit var graph: ActivityComponent
+    lateinit var activityGraph: ActivityComponent
 
     @Inject
     @field:Named("AppPresenter")
@@ -31,9 +31,9 @@ class SingleActivity : AppCompatActivity(), IView {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        BaseApp.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single)
-        BaseApp.inject(this)
     }
 
     override fun onResume() {
