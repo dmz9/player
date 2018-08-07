@@ -33,18 +33,14 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "com.android.support:appcompat-v7:$support_version"
     implementation "com.android.support:support-v4:$support_version"
     implementation "com.android.support:design:$support_version"
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     implementation 'android.arch.lifecycle:extensions:1.1.1'
-    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
-    implementation "io.reactivex.rxjava2:rxjava:$rx_java_version"
     implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
     implementation "com.google.dagger:dagger:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
-    api project(path: ':domain')
     api project(path: ':base')
     implementation project (path: ':plugin_local')
 }

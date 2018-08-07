@@ -21,10 +21,8 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation "io.reactivex.rxjava2:rxandroid:$rx_android_version"
-    implementation "io.reactivex.rxjava2:rxjava:$rx_java_version"
-    implementation project(path: ':domain')
+    api project(path: ':domain')
+    api "io.reactivex.rxjava2:rxandroid:$rx_android_version"
 }
 repositories {
     mavenCentral()
