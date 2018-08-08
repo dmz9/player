@@ -2,10 +2,14 @@ plugins {
     id 'org.jetbrains.kotlin.jvm'
 }
 apply plugin: 'java-library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 dependencies {
     api "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     api "io.reactivex.rxjava2:rxjava:$rx_java_version"
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
 }
 
 sourceCompatibility = "1.6"

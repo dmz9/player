@@ -1,5 +1,6 @@
 package com.dmz9.player.presentation.medialib
 
+import android.util.Log
 import com.dmz9.player.domain.entity.Criteria
 import com.dmz9.player.domain.entity.Playlist
 import com.dmz9.player.domain.usecase.LibraryUseCase
@@ -19,7 +20,11 @@ class MediaLibraryPresenter @Inject constructor(
 		when (event) {
 			is UiEvent.PlayRequest -> {
 				player.setPlaylist(Playlist("Default", tracks = listOf(event.track), currentTrack = event.track))
-				player.play()
+				disposable.clear()
+				val d = player.play().subscribe({
+					Log.d("MediaLibraryPresenter", "on (line 24): $it")
+				},{})
+				disposable.add(d)
 			}
 		}
 	}

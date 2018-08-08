@@ -26,7 +26,7 @@ class LocalTrackLoader @Inject constructor(
 				parser.getSelectionArgs(),
 				parser.getSort()
 			)
-			val mapper = TrackMapper(cursor, parser.getProjection())
+			val mapper = TrackMapper(cursor)
 			val items = mutableListOf<Track>()
 			while (cursor.moveToNext()) {
 				items.add(mapper.getTrack())
