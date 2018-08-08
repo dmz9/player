@@ -4,12 +4,11 @@ import com.dmz9.player.domain.IPlaybackService
 import com.dmz9.player.domain.IPlaylistStorage
 import com.dmz9.player.domain.entity.Playlist
 import io.reactivex.Flowable
-import javax.inject.Inject
 
 /**
  * Created on 05.08.18.
  */
-class PlaybackUseCase @Inject constructor(
+class PlaybackUseCase (
 	private val service: IPlaybackService,
 	private val storage: IPlaylistStorage
 ) {
